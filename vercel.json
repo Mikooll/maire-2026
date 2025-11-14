@@ -1,8 +1,0 @@
-{
-  "buildCommand": "cd maire-2026 && npm install && npm run build",
-  "outputDirectory": "maire-2026/.output/public",
-  "installCommand": "cd maire-2026 && npm install",
-  "framework": "nuxtjs",
-  "devCommand": "cd maire-2026 && npm run dev"
-}
-
