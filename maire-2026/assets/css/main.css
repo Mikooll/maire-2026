@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS pour une gestion encore plus flexible des couleurs */
+:root {
+  --color-primary: #0ea5e9;
+  --color-secondary: #d946ef;
+  --color-accent: #f97316;
+  --color-background: #ffffff;
+  --color-text: #1f2937;
+}
+
+/* Classes utilitaires personnalisées */
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-shadow duration-200 hover:shadow-xl;
+  }
+}
+
