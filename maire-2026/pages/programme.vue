@@ -1,6 +1,16 @@
 <template>
   <div class="py-8 bg-gradient-to-b from-white to-gray-50">
     <div class="container mx-auto px-4">
+      <!-- Titre de la page -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Notre Programme
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Découvrez nos 5 axes prioritaires en cliquant sur les cercles ci-dessous
+        </p>
+      </div>
+
       <!-- Backdrop pour fermer au clic extérieur -->
       <transition name="fade">
         <div
@@ -10,97 +20,83 @@
         ></div>
       </transition>
 
-      <!-- Arbre interactif -->
-      <div class="relative max-w-6xl mx-auto" style="min-height: 450px; position: relative;">
-        <!-- L'arbre image au centre -->
-        <div class="absolute top-24 left-1/2 transform -translate-x-1/2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 z-0 flex items-center justify-center">
-          <img src="/images/tree.png" alt="Arbre" class="w-full h-full object-contain" />
-        </div>
-
-        <!-- Les 5 thèmes positionnés autour de l'arbre -->
-        <div
-          v-for="(theme, index) in themes"
-          :key="theme.id"
-          :class="[
-            'absolute',
-            selectedTheme === theme.id ? 'z-50' : 'z-10'
-          ]"
-          :style="getThemePosition(index)"
-        >
-          <!-- Cercle du thème -->
+      <!-- Cordée interactive -->
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Bulle de BD qui apparaît au-dessus du thème -->
+        <transition name="bubble">
           <div 
-            class="cursor-pointer transition-all duration-300 hover:scale-110"
-            @click="toggleTheme(theme.id)"
+            v-if="selectedTheme !== null" 
+            class="absolute top-0 left-1/2 -translate-x-1/2 z-50 px-4 w-full max-w-xl"
           >
             <div 
-              :class="[
-                'bg-white rounded-full shadow-lg flex flex-col items-center justify-center border-4',
-                'w-20 h-20 p-3 md:w-24 md:h-24 md:p-4 lg:w-28 lg:h-28 lg:p-5',
-                selectedTheme === theme.id ? 'border-primary-500 scale-110' : 'border-primary-200 hover:border-primary-400'
-              ]"
+              class="bg-white rounded-2xl shadow-2xl p-4 md:p-5 border-3 border-gray-800 relative"
+              @click.stop
             >
-              <div class="text-2xl md:text-3xl mb-1">{{ theme.icon }}</div>
-              <div class="text-[10px] md:text-xs font-semibold text-center text-gray-700 leading-tight">
-                {{ theme.title }}
-              </div>
-            </div>
-          </div>
-
-          <!-- Fruits qui apparaissent sous le thème -->
-          <transition name="fruits">
-            <div 
-              v-if="selectedTheme === theme.id" 
-              :class="[
-                'absolute top-full mt-4 w-64 md:w-72 lg:w-80',
-                index === 0 ? 'left-1/2 -translate-x-1/2' : (index === 2 || index === 4 ? 'right-0' : 'left-0')
-              ]"
-              style="z-index: 100;"
-            >
-              <div 
-                class="bg-white rounded-xl shadow-2xl p-4 border-2 border-primary-200"
-                @click.stop
+              
+              <!-- Bouton fermer en style BD -->
+              <button
+                @click="selectedTheme = null"
+                class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg border-3 border-gray-800 transition-all duration-200 hover:scale-110 shadow-lg z-10"
+                aria-label="Fermer"
               >
-                <!-- Titre du thème -->
-                <h4 class="text-sm font-bold text-gray-800 mb-3 text-center">{{ theme.title }}</h4>
+                ×
+              </button>
+              <!-- Titre du thème avec icône -->
+              <div class="flex items-center justify-center gap-2 mb-3 pb-2 border-b-2 border-primary-100">
+                <span class="text-2xl">{{ getCurrentTheme()?.icon }}</span>
+                <h4 class="text-base md:text-lg font-bold text-gray-800">{{ getCurrentTheme()?.title }}</h4>
+              </div>
+              
+              <!-- Sous-titre descriptif -->
+              <p class="text-center text-gray-600 text-xs md:text-sm mb-3 italic">
+                {{ getCurrentTheme()?.description }}
+              </p>
                 
-                <!-- Liste des fruits -->
-                <div class="space-y-2">
-                  <div
-                    v-for="(subtheme, subIndex) in theme.subthemes"
-                    :key="subIndex"
-                    class="flex items-center gap-3 p-2 bg-gradient-to-r from-primary-50 to-white rounded-lg hover:shadow-md transition-shadow cursor-pointer"
-                    @click="tooltipData = { themeId: theme.id, subthemeIndex: subIndex, title: subtheme.title, text: subtheme.details }"
-                  >
-                    <!-- Pomme émoji -->
-                    <div class="text-3xl flex-shrink-0">
-                      🍎
-                    </div>
-                    
-                    <!-- Texte du sous-thème -->
-                    <div class="flex-1">
-                      <p class="text-xs text-gray-700 leading-tight">{{ subtheme.title }}</p>
-                    </div>
-                    
-                    <!-- Icône info -->
-                    <div class="text-primary-500 flex-shrink-0">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <!-- Liste des fruits -->
+              <div class="overflow-hidden rounded-lg">
+                <div class="grid grid-cols-1 gap-2 max-h-[50vh] overflow-y-auto px-3 py-2.5 scrollbar-thin scrollbar-thumb-primary-300 scrollbar-track-gray-100" style="padding-bottom: 2rem;">
+                <div
+                  v-for="(subtheme, subIndex) in getCurrentTheme()?.subthemes"
+                  :key="subIndex"
+                  class="group relative flex items-start gap-2 p-2.5 bg-gradient-to-br from-white via-primary-50/30 to-white rounded-lg border-2 border-gray-700 hover:border-primary-500 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5"
+                  @click="tooltipData = { themeId: selectedTheme, subthemeIndex: subIndex, title: subtheme.title, text: subtheme.details }"
+                >
+                  <!-- Icône pertinente -->
+                  <div class="text-2xl flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300">
+                    {{ getRelevantIcon(selectedTheme, subIndex) }}
+                  </div>
+                  
+                  <!-- Texte du sous-thème -->
+                  <div class="flex-1 min-w-0">
+                    <p class="text-xs md:text-sm text-gray-800 leading-tight font-medium group-hover:text-primary-700 transition-colors">
+                      {{ subtheme.title }}
+                    </p>
+                  </div>
+                  
+                  <!-- Icône info avec badge "Détails" -->
+                  <div class="flex flex-col items-center gap-0.5 flex-shrink-0">
+                    <div class="text-primary-500 group-hover:text-primary-600 transition-colors">
+                      <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
+                    <span class="text-[10px] text-primary-600 font-medium">
+                      Plus d'info
+                    </span>
                   </div>
                 </div>
-
-                <!-- Bouton fermer -->
-                <button
-                  @click="selectedTheme = null"
-                  class="mt-3 w-full px-3 py-1 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg transition-colors text-xs font-medium"
-                >
-                  Fermer
-                </button>
+                </div>
               </div>
             </div>
-          </transition>
-        </div>
+          </div>
+        </transition>
+
+        <!-- Le logo au centre - cliquable directement -->
+        <div 
+          class=" h-80 md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] mx-auto"
+          @click="handleSvgClick"
+          v-html="svgContent"
+        ></div>
       </div>
     </div>
 
@@ -108,7 +104,7 @@
     <transition name="fade">
       <div
         v-if="tooltipData"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4"
+        class="tooltip-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4"
         @click="tooltipData = null"
       >
         <div
@@ -158,6 +154,22 @@ useHead({
   ],
 })
 
+// État pour le contenu SVG
+const svgContent = ref('')
+
+// Charger le SVG au montage du composant
+onMounted(async () => {
+  try {
+    const response = await fetch('/images/logo.svg')
+    svgContent.value = await response.text()
+  } catch (error) {
+    console.error('Erreur lors du chargement du SVG:', error)
+  }
+  
+  updateWindowWidth()
+  window.addEventListener('resize', updateWindowWidth)
+})
+
 // État pour gérer le thème sélectionné
 const selectedTheme = ref<number | null>(null)
 
@@ -171,12 +183,6 @@ const windowWidth = ref(0)
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth
 }
-
-// Lifecycle hooks
-onMounted(() => {
-  updateWindowWidth()
-  window.addEventListener('resize', updateWindowWidth)
-})
 
 onUnmounted(() => {
   window.removeEventListener('resize', updateWindowWidth)
@@ -274,43 +280,35 @@ const themes = [
   },
 ]
 
-// Fonction pour obtenir la position de chaque thème autour de l'arbre (responsive)
-const getThemePosition = (index) => {
-  const width = windowWidth.value
-  
-  // Mobile (< 768px)
-  if (width < 768) {
-    const positionsMobile = [
-      { top: '3.25rem', left: '50%', transform: 'translateX(-50%)' },    // 1. Haut centre (Associations)
-      { top: '8.75rem', left: '0.75rem' },                                // 2. Haut gauche (Eau)
-      { top: '8.75rem', right: '0.75rem' },                               // 3. Haut droite (Chartreuse)
-      { top: '15.75rem', left: '1.75rem' },                                // 4. Bas gauche (Déontologie)
-      { top: '15.75rem', right: '1.75rem' },                               // 5. Bas droite (Finances)
-    ]
-    return positionsMobile[index] || {}
+// Fonction pour obtenir le thème actuellement sélectionné
+const getCurrentTheme = () => {
+  if (selectedTheme.value === null) return null
+  return themes.find(theme => theme.id === selectedTheme.value)
+}
+
+// Fonction pour obtenir une icône pertinente selon le thème et l'index
+const getRelevantIcon = (themeId, subIndex) => {
+  const iconMapping = {
+    1: ['💶', '🔍'], // Soutien aux associations : argent, recherche
+    2: ['💧'], // L'eau : goutte d'eau
+    3: ['🛣️', '📹'], // Mieux vivre : route, caméra
+    4: ['📋', '📉', '🚫', '👥'], // Déontologie : engagements, baisse, stop, participation
+    5: ['🔒', '🏛️', '📊'], // Finances : stabilité, patrimoine, diversité
   }
   
-  // Tablette (768px - 1024px)
-  if (width < 1024) {
-    const positionsTablet = [
-      { top: '2.25rem', left: '50%', transform: 'translateX(-50%)' },   // 1. Haut centre (Associations)
-      { top: '6.25rem', left: '130px' },                                // 2. Haut gauche (Eau)
-      { top: '6.25rem', right: '130px' },                               // 3. Haut droite (Chartreuse)
-      { top: '13.75rem', left: '100px' },                               // 4. Bas gauche (Déontologie)
-      { top: '13.75rem', right: '100px' },                              // 5. Bas droite (Finances)
-    ]
-    return positionsTablet[index] || {}
-  }
+  const icons = iconMapping[themeId] || ['✅']
+  return icons[subIndex % icons.length]
+}
+
+// Fonction pour gérer les clics sur le SVG
+const handleSvgClick = (event) => {
+  // Trouver l'élément cliqué qui a la classe 'theme-clickable'
+  const target = event.target.closest('.theme-clickable')
   
-  // Desktop (>= 1024px)
-  const positionsDesktop = [
-    { top: '2.25rem', left: '50%', transform: 'translateX(-50%)' },     // 1. Haut centre (Associations)
-    { top: '6.25rem', left: '20.25rem' },                                 // 2. Haut gauche (Eau)
-    { top: '6.25rem', right: '20.25rem' },                                // 3. Haut droite (Chartreuse)
-    { top: '13.75rem', left: '18.75rem' },                                 // 4. Bas gauche (Déontologie)
-    { top: '13.75rem', right: '18.75rem' },                                // 5. Bas droite (Finances)
-  ]
-  return positionsDesktop[index] || {}
+  if (target) {
+    const themeId = parseInt(target.getAttribute('data-theme-id'))
+    toggleTheme(themeId)
+  }
 }
 
 // Fonction pour toggle un thème (ouvrir/fermer)
@@ -324,6 +322,37 @@ const toggleTheme = (themeId) => {
 </script>
 
 <style scoped>
+/* Style pour le SVG du logo principal uniquement */
+:deep(.h-80 svg),
+:deep(.md\:h-\[500px\] svg),
+:deep(.lg\:h-\[600px\] svg) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Les icônes SVG dans la bulle et la modale gardent leur taille définie */
+.comic-bubble svg,
+.tooltip-modal svg {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Style pour les thèmes cliquables dans le SVG */
+:deep(.theme-clickable) {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+:deep(.theme-clickable circle) {
+  transition: all 0.3s ease;
+}
+
+:deep(.theme-clickable:hover circle) {
+  stroke-width: 0.8;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -339,19 +368,56 @@ const toggleTheme = (themeId) => {
   animation: fade-in 0.4s ease-out;
 }
 
-/* Transition pour les fruits */
-.fruits-enter-active {
-  transition: all 0.3s ease-out;
+/* Style de bulle de BD */
+.comic-bubble {
+  position: relative;
+  background: white;
+  animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-.fruits-leave-active {
-  transition: all 0.2s ease-in;
+.comic-bubble::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 1.5rem;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.fruits-enter-from,
-.fruits-leave-to {
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Transition pour la bulle */
+.bubble-enter-active {
+  animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.bubble-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+.bubble-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: scale(0.8) translateY(-20px);
 }
 
 /* Transition pour la modale */
@@ -363,6 +429,38 @@ const toggleTheme = (themeId) => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Scrollbar personnalisée */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+  border: 2px solid #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Limite de hauteur pour mobile */
+@media (max-width: 768px) {
+  .comic-bubble {
+    max-height: 65vh;
+  }
 }
 </style>
 
