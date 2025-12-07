@@ -1,11 +1,11 @@
 <template>
-  <footer class="bg-gray-800 text-white mt-auto">
+  <footer class="bg-secondary-700 text-white mt-auto">
     <div class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Section Logo et Description -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Maire 2026</h3>
-          <p class="text-gray-300">
+          <h3 class="text-xl font-bold mb-4">Unis pour les laurentinois 2026</h3>
+          <p class="text-secondary-100">
             Un projet pour notre commune, un engagement pour l'avenir.
           </p>
         </div>
@@ -15,22 +15,22 @@
           <h4 class="text-lg font-semibold mb-4">Navigation</h4>
           <ul class="space-y-2">
             <li>
-              <NuxtLink to="/" class="text-gray-300 hover:text-white transition-colors duration-200">
+              <NuxtLink to="/" class="text-secondary-100 hover:text-white transition-colors duration-200">
                 Accueil
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/candidats" class="text-gray-300 hover:text-white transition-colors duration-200">
+              <NuxtLink to="/candidats" class="text-secondary-100 hover:text-white transition-colors duration-200">
                 Candidats
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/programme" class="text-gray-300 hover:text-white transition-colors duration-200">
+              <NuxtLink to="/programme" class="text-secondary-100 hover:text-white transition-colors duration-200">
                 Programme
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/contact" class="text-gray-300 hover:text-white transition-colors duration-200">
+              <NuxtLink to="/contact" class="text-secondary-100 hover:text-white transition-colors duration-200">
                 Contact
               </NuxtLink>
             </li>
@@ -40,8 +40,8 @@
         <!-- Section Contact -->
         <div>
           <h4 class="text-lg font-semibold mb-4">Contact</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li>Email : contact@maire2026.fr</li>
+          <ul class="space-y-2 text-secondary-100">
+            <li>Email : contact@unispourleslaurentinois.fr</li>
             <li>Téléphone : 01 23 45 67 89</li>
             <li class="pt-4">
               <!-- Réseaux sociaux - à personnaliser -->
@@ -62,8 +62,8 @@
         </div>
       </div>
 
-      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-        <p>&copy; {{ currentYear }} Maire 2026. Tous droits réservés.</p>
+      <div class="border-t border-secondary-600 mt-8 pt-6 text-center text-secondary-200">
+        <p>&copy; {{ currentYear }} Unis pour les laurentinois 2026. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

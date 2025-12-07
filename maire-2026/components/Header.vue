@@ -4,8 +4,8 @@
       <nav class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center space-x-2">
-          <div class="text-2xl font-bold text-primary-600">
-            Maire 2026
+          <div class="text-2xl font-bold text-primary-500">
+            Unis pour les laurentinois 2026
           </div>
         </NuxtLink>
 
@@ -13,29 +13,29 @@
         <div class="hidden md:flex space-x-8">
           <NuxtLink
             to="/"
-            class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-            :class="{ 'text-primary-600': $route.path === '/' }"
+            class="text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+            :class="{ 'text-primary-500': $route.path === '/' }"
           >
             Accueil
           </NuxtLink>
           <NuxtLink
             to="/candidats"
-            class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-            :class="{ 'text-primary-600': $route.path === '/candidats' }"
+            class="text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+            :class="{ 'text-primary-500': $route.path === '/candidats' }"
           >
             Candidats
           </NuxtLink>
           <NuxtLink
             to="/programme"
-            class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-            :class="{ 'text-primary-600': $route.path === '/programme' }"
+            class="text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+            :class="{ 'text-primary-500': $route.path === '/programme' }"
           >
             Programme
           </NuxtLink>
           <NuxtLink
             to="/contact"
-            class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-            :class="{ 'text-primary-600': $route.path === '/contact' }"
+            class="text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+            :class="{ 'text-primary-500': $route.path === '/contact' }"
           >
             Contact
           </NuxtLink>
@@ -44,7 +44,7 @@
         <!-- Bouton Menu Mobile -->
         <button
           @click="toggleMenu"
-          class="md:hidden text-gray-700 hover:text-primary-600 focus:outline-none"
+          class="md:hidden text-secondary-500 hover:text-primary-500 focus:outline-none"
           aria-label="Menu"
         >
           <svg
@@ -78,32 +78,32 @@
       >
         <NuxtLink
           to="/"
-          class="block py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-          :class="{ 'text-primary-600': $route.path === '/' }"
+          class="block py-2 text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+          :class="{ 'text-primary-500': $route.path === '/' }"
           @click="closeMenu"
         >
           Accueil
         </NuxtLink>
         <NuxtLink
           to="/candidats"
-          class="block py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-          :class="{ 'text-primary-600': $route.path === '/candidats' }"
+          class="block py-2 text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+          :class="{ 'text-primary-500': $route.path === '/candidats' }"
           @click="closeMenu"
         >
           Candidats
         </NuxtLink>
         <NuxtLink
           to="/programme"
-          class="block py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-          :class="{ 'text-primary-600': $route.path === '/programme' }"
+          class="block py-2 text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+          :class="{ 'text-primary-500': $route.path === '/programme' }"
           @click="closeMenu"
         >
           Programme
         </NuxtLink>
         <NuxtLink
           to="/contact"
-          class="block py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-          :class="{ 'text-primary-600': $route.path === '/contact' }"
+          class="block py-2 text-secondary-500 hover:text-primary-500 font-medium transition-colors duration-200"
+          :class="{ 'text-primary-500': $route.path === '/contact' }"
           @click="closeMenu"
         >
           Contact

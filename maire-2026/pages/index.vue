@@ -26,7 +26,7 @@
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+          <h2 class="text-3xl font-bold text-center mb-8 text-secondary-500">
             Notre Vision
           </h2>
           <div class="grid md:grid-cols-2 gap-8">
@@ -36,7 +36,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-800">Une équipe engagée</h3>
+              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Une équipe engagée</h3>
               <p class="text-gray-600">
                 Des femmes et des hommes dévoués, prêts à servir notre commune avec passion et détermination.
               </p>
@@ -48,7 +48,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-800">Des engagements concrets</h3>
+              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Des engagements concrets</h3>
               <p class="text-gray-600">
                 Un programme réaliste et ambitieux, construit avec et pour les habitants de notre commune.
               </p>
@@ -60,7 +60,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-800">Un avenir durable</h3>
+              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Un avenir durable</h3>
               <p class="text-gray-600">
                 Des projets pensés pour préserver notre environnement et améliorer notre cadre de vie.
               </p>
@@ -72,7 +72,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-800">Une gestion transparente</h3>
+              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Une gestion transparente</h3>
               <p class="text-gray-600">
                 Une gestion responsable des finances publiques avec transparence et déontologie.
               </p>
@@ -85,7 +85,7 @@
     <!-- Section Piliers du Programme -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-12 text-secondary-500">
           Les 5 piliers de notre programme
         </h2>
         <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-6">
@@ -93,31 +93,31 @@
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <span class="text-2xl">🤝</span>
             </div>
-            <h3 class="font-semibold text-gray-800">Soutien aux associations</h3>
+            <h3 class="font-semibold text-secondary-500">Soutien aux associations</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <span class="text-2xl">💧</span>
             </div>
-            <h3 class="font-semibold text-gray-800">L'eau</h3>
+            <h3 class="font-semibold text-secondary-500">L'eau</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <span class="text-2xl">🏔️</span>
             </div>
-            <h3 class="font-semibold text-gray-800">Mieux vivre en Chartreuse</h3>
+            <h3 class="font-semibold text-secondary-500">Mieux vivre en Chartreuse</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <span class="text-2xl">⚖️</span>
             </div>
-            <h3 class="font-semibold text-gray-800">Restaurer la déontologie</h3>
+            <h3 class="font-semibold text-secondary-500">Restaurer la déontologie</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <span class="text-2xl">💰</span>
             </div>
-            <h3 class="font-semibold text-gray-800">Finances</h3>
+            <h3 class="font-semibold text-secondary-500">Finances</h3>
           </div>
         </div>
         <div class="text-center mt-12">
@@ -147,7 +147,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Accueil - Maire 2026',
+  title: 'Accueil - Unis pour les laurentinois',
   meta: [
     {
       name: 'description',

@@ -1,4 +1,4 @@
-# DEVBOOK - Site Électoral Maire 2026
+# DEVBOOK - Site Électoral Allegret 2026
 
 ## 📋 Vue d'ensemble
 Site vitrine pour présenter le programme d'un parti politique pour les élections municipales.

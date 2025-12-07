@@ -1,4 +1,4 @@
-# 🚀 Installation et Démarrage - Site Maire 2026
+# 🚀 Installation et Démarrage - Site Allegret 2026
 
 ## ✅ Ce qui a été fait
 

@@ -4,11 +4,11 @@
 
 /* Variables CSS pour une gestion encore plus flexible des couleurs */
 :root {
-  --color-primary: #0ea5e9;
-  --color-secondary: #d946ef;
-  --color-accent: #f97316;
+  --color-primary: #C06736;
+  --color-secondary: #7A5F44;
+  --color-accent: #C06736;
   --color-background: #ffffff;
-  --color-text: #1f2937;
+  --color-text: #7A5F44;
 }
 
 /* Classes utilitaires personnalisées */

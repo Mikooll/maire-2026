@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <!-- En-tête -->
       <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+        <h1 class="text-4xl font-bold text-secondary-500 mb-4">
           Notre Équipe
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -27,7 +27,7 @@
 import type { Candidate } from '~/types/candidate'
 
 useHead({
-  title: 'Notre Équipe - Maire 2026',
+  title: 'Notre Équipe - Unis pour les laurentinois',
   meta: [
     {
       name: 'description',

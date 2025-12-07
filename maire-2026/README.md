@@ -1,4 +1,4 @@
-# Site Électoral - Maire 2026
+# Site Électoral - Unis pour les laurentinois
 
 Site vitrine pour présenter le programme d'un parti politique pour les élections municipales de 2026.
 
@@ -39,7 +39,7 @@ npm run preview
 ## 📁 Structure du projet
 
 ```
-maire-2026/
+unis-pour-les-laurentinois/
 ├── app/                    # Dossier principal de l'application
 │   └── app.vue            # Composant racine
 ├── assets/                # Ressources (CSS, images)
@@ -75,13 +75,13 @@ Modifiez les couleurs principales dans `tailwind.config.js` :
 ```javascript
 colors: {
   primary: {
-    500: '#0ea5e9', // Couleur principale
+    500: '#C06736', // Couleur principale - Terracotta
   },
   secondary: {
-    500: '#d946ef', // Couleur secondaire
+    500: '#7A5F44', // Couleur secondaire - Marron
   },
   accent: {
-    500: '#f97316', // Couleur d'accent
+    500: '#C06736', // Couleur d'accent
   },
 }
 ```

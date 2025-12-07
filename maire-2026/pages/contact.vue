@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <!-- En-tête -->
       <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+        <h1 class="text-4xl font-bold text-secondary-500 mb-4">
           Contactez-nous
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -15,14 +15,14 @@
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Formulaire de contact -->
           <div class="card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+            <h2 class="text-2xl font-bold text-secondary-500 mb-6">
               Envoyez-nous un message
             </h2>
             
             <form @submit.prevent="handleSubmit" class="space-y-4">
               <!-- Nom -->
               <div>
-                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="name" class="block text-sm font-semibold text-secondary-500 mb-2">
                   Nom complet *
                 </label>
                 <input
@@ -37,7 +37,7 @@
 
               <!-- Email -->
               <div>
-                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="email" class="block text-sm font-semibold text-secondary-500 mb-2">
                   Email *
                 </label>
                 <input
@@ -52,7 +52,7 @@
 
               <!-- Téléphone -->
               <div>
-                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="phone" class="block text-sm font-semibold text-secondary-500 mb-2">
                   Téléphone
                 </label>
                 <input
@@ -66,7 +66,7 @@
 
               <!-- Sujet -->
               <div>
-                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="subject" class="block text-sm font-semibold text-secondary-500 mb-2">
                   Sujet *
                 </label>
                 <input
@@ -81,7 +81,7 @@
 
               <!-- Message -->
               <div>
-                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="message" class="block text-sm font-semibold text-secondary-500 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -117,7 +117,7 @@
           <!-- Informations de contact -->
           <div class="space-y-6">
             <div class="card">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6">
+              <h2 class="text-2xl font-bold text-secondary-500 mb-6">
                 Nos coordonnées
               </h2>
               
@@ -129,7 +129,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-gray-800">Adresse</h3>
+                    <h3 class="font-semibold text-secondary-500">Adresse</h3>
                     <p class="text-gray-600">
                       Mairie<br />
                       Place de la Mairie<br />
@@ -144,7 +144,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-gray-800">Téléphone</h3>
+                    <h3 class="font-semibold text-secondary-500">Téléphone</h3>
                     <p class="text-gray-600">01 23 45 67 89</p>
                   </div>
                 </div>
@@ -155,8 +155,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-gray-800">Email</h3>
-                    <p class="text-gray-600">contact@maire2026.fr</p>
+                    <h3 class="font-semibold text-secondary-500">Email</h3>
+                    <p class="text-gray-600">contact@unispourleslaurentinois.fr</p>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@
 
             <!-- Horaires -->
             <div class="card">
-              <h3 class="text-xl font-bold text-gray-800 mb-4">
+              <h3 class="text-xl font-bold text-secondary-500 mb-4">
                 Permanences
               </h3>
               <div class="space-y-2 text-gray-600">
@@ -177,7 +177,7 @@
 
             <!-- Réseaux sociaux -->
             <div class="card">
-              <h3 class="text-xl font-bold text-gray-800 mb-4">
+              <h3 class="text-xl font-bold text-secondary-500 mb-4">
                 Suivez-nous
               </h3>
               <div class="flex space-x-4">
@@ -221,7 +221,7 @@
 import { ref, reactive } from 'vue'
 
 useHead({
-  title: 'Contact - Maire 2026',
+  title: 'Contact - Unis pour les laurentinois',
   meta: [
     {
       name: 'description',
@@ -248,7 +248,7 @@ const handleSubmit = async () => {
   await new Promise(resolve => setTimeout(resolve, 1000))
   
   // Pour l'instant, on utilise mailto comme solution simple
-  const mailtoLink = `mailto:contact@maire2026.fr?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+  const mailtoLink = `mailto:contact@unispourleslaurentinois.fr?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
     `Nom: ${form.name}\nEmail: ${form.email}\nTéléphone: ${form.phone}\n\nMessage:\n${form.message}`
   )}`
   
