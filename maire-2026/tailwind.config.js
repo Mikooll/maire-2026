@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         // Couleurs principales du site - Facilement modifiables
         primary: {

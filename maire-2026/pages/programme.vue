@@ -3,9 +3,22 @@
     <div class="container mx-auto px-4">
       <!-- Titre de la page -->
       <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold text-secondary-500 mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-secondary-500 mb-6">
           Notre Programme
         </h1>
+
+        <!-- Citation -->
+        <div class="max-w-4xl mx-auto mb-8 bg-primary-50 border-l-4 border-primary-500 rounded-r-lg p-6 md:p-8">
+          <blockquote class="text-secondary-600 text-base md:text-lg leading-relaxed mb-4 italic">
+            « Je suis né parmi vous, je vis et je travaille parmi vous. Face aux manœuvres politiciennes ainsi qu'aux dérives budgétaires et fiscales, je me dois de vous proposer une alternance... 
+            <br><br>
+            Solide, déterminée, préparée, avec l'aide d'une équipe compétente, je veux vous aider à bâtir la commune que vous méritez ! »
+          </blockquote>
+          <cite class="block text-right text-secondary-500 font-bold not-italic">
+            — Christian Allegret
+          </cite>
+        </div>
+
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           Découvrez nos 5 axes prioritaires en cliquant sur les thèmes ci-dessous
         </p>

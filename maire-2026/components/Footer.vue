@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Section Logo et Description -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Unis pour les laurentinois 2026</h3>
+          <h3 class="text-xl font-bold mb-4">Unis pour les laurentinois</h3>
           <p class="text-secondary-100">
             Un projet pour notre commune, un engagement pour l'avenir.
           </p>
@@ -63,7 +63,7 @@
       </div>
 
       <div class="border-t border-secondary-600 mt-8 pt-6 text-center text-secondary-200">
-        <p>&copy; {{ currentYear }} Unis pour les laurentinois 2026. Tous droits réservés.</p>
+        <p>&copy; {{ currentYear }} Unis pour les laurentinois. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

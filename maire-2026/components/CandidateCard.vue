@@ -7,7 +7,7 @@
         :alt="`Photo de ${candidate.firstName} ${candidate.lastName}`"
         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
         @error="handleImageError"
-      />
+      >
     </div>
 
     <!-- Informations -->
@@ -22,18 +22,18 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <div>
-            <p class="text-sm font-semibold text-secondary-600">Poste</p>
-            <p class="text-gray-600">{{ candidate.position }}</p>
+            <p class="text-sm font-semibold text-secondary-600">Activité actuelle</p>
+            <p class="text-gray-600">{{ candidate.currentJob }}</p>
           </div>
         </div>
 
         <div class="flex items-start">
-          <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
           </svg>
-          <div>
-            <p class="text-sm font-semibold text-secondary-600">Activité actuelle</p>
-            <p class="text-gray-600">{{ candidate.currentJob }}</p>
+          <div class="flex-1">
+            <p class="text-sm font-semibold text-secondary-600 mb-1">Citation</p>
+            <p class="text-gray-600 italic">"{{ candidate.citation }}"</p>
           </div>
         </div>
       </div>

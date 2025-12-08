@@ -5,7 +5,7 @@
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center space-x-2">
           <div class="text-2xl font-bold text-primary-500">
-            Unis pour les laurentinois 2026
+            Unis pour les laurentinois
           </div>
         </NuxtLink>
 

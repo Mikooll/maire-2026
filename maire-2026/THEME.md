@@ -1,8 +1,34 @@
-# Guide des Couleurs - Unis pour les laurentinois
+# Guide du Thème - Unis pour les laurentinois
+
+Ce document décrit la palette de couleurs et la typographie utilisées dans le projet Unis pour les laurentinois.
+
+## Typographie
+
+### Police : Montserrat
+
+Le site utilise la police **Montserrat** de Google Fonts avec les graisses suivantes :
+
+#### Utilisation dans Tailwind :
+- `font-bold` (700) : **Montserrat Bold** - Pour les titres secondaires et textes importants
+- `font-extrabold` (800) : **Montserrat ExtraBold** - Pour les titres principaux et éléments d'emphase
+
+#### Exemples d'utilisation :
+```vue
+<!-- Titre principal avec ExtraBold -->
+<h1 class="text-4xl font-extrabold text-secondary-500">
+  Titre principal
+</h1>
+
+<!-- Titre secondaire avec Bold -->
+<h2 class="text-2xl font-bold text-secondary-500">
+  Sous-titre
+</h2>
+
+<!-- Texte normal (Regular 400 par défaut) -->
+<p class="text-base">Contenu du texte</p>
+```
 
 ## Palette de Couleurs
-
-Ce document décrit la palette de couleurs utilisée dans le projet Unis pour les laurentinois.
 
 ### Couleur Principale (Primary)
 **Terracotta - #C06736**

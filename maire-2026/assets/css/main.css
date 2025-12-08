@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  Police Montserrat
+  - font-bold (700) : Montserrat Bold
+  - font-extrabold (800) : Montserrat ExtraBold
+  La police est chargée via Google Fonts et configurée dans tailwind.config.js
+*/
+
 /* Variables CSS pour une gestion encore plus flexible des couleurs */
 :root {
   --color-primary: #C06736;
