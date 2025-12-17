@@ -362,7 +362,7 @@ const tooltipData = ref<{ themeId: number, subthemeIndex: number, title: string,
 const themes = [
   {
     id: 1,
-    icon: '🤝',
+    icon: '👥',
     title: 'Soutien aux associations',
     description: 'Les associations sont le cœur battant de notre commune. Nous nous engageons à les soutenir activement.',
     subthemes: [
@@ -378,7 +378,7 @@ const themes = [
   },
   {
     id: 2,
-    icon: '💧',
+    icon: '🚰',
     title: 'L\'eau',
     description: 'La gestion de l\'eau est un enjeu majeur. Nous garantirons une eau de qualité pour tous.',
     subthemes: [
@@ -390,8 +390,8 @@ const themes = [
   },
   {
     id: 3,
-    icon: '🏔️',
-    title: 'Mieux vivre en Chartreuse',
+    icon: '🔓',
+    title: 'Vivre en sécurité',
     description: 'Améliorer le cadre de vie de tous les habitants dans le respect de notre environnement.',
     subthemes: [
       {
@@ -430,7 +430,7 @@ const themes = [
   },
   {
     id: 5,
-    icon: '💰',
+    icon: '€',
     title: 'Finances',
     description: 'Une gestion rigoureuse et responsable des finances communales.',
     subthemes: [

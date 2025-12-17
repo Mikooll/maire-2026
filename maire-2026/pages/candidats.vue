@@ -40,49 +40,9 @@ useHead({
 const candidates: Candidate[] = [
   {
     id: 1,
-    firstName: 'Marie',
-    lastName: 'DUPONT',
+    firstName: 'Christian',
+    lastName: 'ALLEGRET',
     currentJob: 'Directrice d\'école',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
-  {
-    id: 2,
-    firstName: 'Jean',
-    lastName: 'MARTIN',
-    currentJob: 'Expert-comptable',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
-  {
-    id: 3,
-    firstName: 'Sophie',
-    lastName: 'BERNARD',
-    currentJob: 'Ingénieure environnement',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
-  {
-    id: 4,
-    firstName: 'Pierre',
-    lastName: 'DUBOIS',
-    currentJob: 'Architecte',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
-  {
-    id: 5,
-    firstName: 'Laure',
-    lastName: 'PETIT',
-    currentJob: 'Professeure de musique',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
-  {
-    id: 6,
-    firstName: 'Thomas',
-    lastName: 'ROBERT',
-    currentJob: 'Éducateur sportif',
     photo: '/images/candidates/placeholder.jpg',
     citation: 'Coucou'
   },
