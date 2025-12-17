@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
+    "deploy:check": "npm run generate && echo '✅ Build réussi ! Prêt pour le déploiement'"
   },
   "dependencies": {
     "nuxt": "^4.2.0",

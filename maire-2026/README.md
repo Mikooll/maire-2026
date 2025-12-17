@@ -32,9 +32,25 @@ Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:30
 # Créer un build de production
 npm run build
 
+# Générer un site statique
+npm run generate
+
 # Prévisualiser le build de production
 npm run preview
+
+# Vérifier que le build fonctionne
+npm run deploy:check
 ```
+
+## 🚀 Déploiement Automatique sur Ionos
+
+Ce projet est configuré pour un **déploiement automatique sur Ionos** à chaque commit !
+
+### 📖 Guide de configuration
+
+**→ Consultez [`DEPLOIEMENT_IONOS.md`](DEPLOIEMENT_IONOS.md)** pour configurer le déploiement automatique (10 minutes)
+
+Une fois configuré : `git push` = mise en production automatique sur votre hébergement Ionos ! 🎉
 
 ## 📁 Structure du projet
 
