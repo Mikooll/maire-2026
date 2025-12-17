@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
   },
+  runtimeConfig: {
+    // Clés privées (disponibles uniquement côté serveur)
+    resendApiKey: process.env.RESEND_API_KEY || '',
+  },
   app: {
     head: {
       link: [

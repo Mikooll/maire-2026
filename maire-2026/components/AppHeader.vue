@@ -43,10 +43,10 @@
 
         <!-- Bouton Menu Mobile -->
         <button
-          @click="toggleMenu"
+          aria-label="Ouvrir le menu"
           class="md:hidden text-secondary-500 hover:text-primary-500 focus:outline-none"
-          aria-label="Menu"
-        >
+          @click="toggleMenu"
+          >
           <svg
             class="w-6 h-6"
             fill="none"

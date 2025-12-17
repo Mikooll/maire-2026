@@ -58,7 +58,7 @@
                     @click="showDetails(1, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                   >
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(1, idx) }}</span>
                       <p class="text-xs text-secondary-600 flex-1">{{ subtheme.title }}</p>
                     </div>
@@ -98,7 +98,7 @@
                     @click="showDetails(3, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                   >
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(3, idx) }}</span>
                       <p class="text-xs text-secondary-600 flex-1">{{ subtheme.title }}</p>
                     </div>
@@ -150,7 +150,7 @@
                     @click="showDetails(5, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                   >
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(5, idx) }}</span>
                       <p class="text-xs text-secondary-600 flex-1">{{ subtheme.title }}</p>
                     </div>
@@ -193,7 +193,7 @@
                     @click="showDetails(2, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                   >
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(2, idx) }}</span>
                       <p class="text-xs text-secondary-600 flex-1">{{ subtheme.title }}</p>
                     </div>
@@ -233,7 +233,7 @@
                     @click="showDetails(4, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                   >
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(4, idx) }}</span>
                       <p class="text-xs text-secondary-600 flex-1">{{ subtheme.title }}</p>
                     </div>
@@ -286,7 +286,7 @@
                   @click="showDetails(theme.id, idx, subtheme)"
                   class="p-3 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
                 >
-                  <div class="flex items-start gap-2">
+                  <div class="flex items-center gap-2">
                     <span class="text-xl">{{ getRelevantIcon(theme.id, idx) }}</span>
                     <p class="text-sm text-secondary-600 flex-1">{{ subtheme.title }}</p>
                   </div>
@@ -309,7 +309,7 @@
           class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-6 transform transition-all"
           @click.stop
         >
-          <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-bold text-secondary-500 flex-1 pr-4">
               {{ tooltipData.title }}
             </h3>

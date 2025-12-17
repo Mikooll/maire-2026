@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import { defineEventHandler, readBody, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -14,13 +15,16 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    // Récupérer la configuration runtime
+    const config = useRuntimeConfig()
+    
     // Initialiser Resend avec la clé API
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend(config.resendApiKey)
 
     // Email de notification pour l'équipe
     const notificationEmail = await resend.emails.send({
-      from: 'wawamika0@gmail.com',
-      to: 'wawamika0@gmail.com',
+      from: 'unis38380@gmail.com',
+      to: 'unis38380@gmail.com',
       subject: `[Contact Site] ${subject}`,
       html: `
         <h2>Nouveau message du formulaire de contact</h2>
@@ -36,7 +40,7 @@ export default defineEventHandler(async (event) => {
 
     // Email de confirmation pour l'utilisateur
     const confirmationEmail = await resend.emails.send({
-      from: 'wawamika0@gmail.com',
+      from: 'unis38380@gmail.com',
       to: email,
       subject: 'Confirmation de réception de votre message',
       html: `

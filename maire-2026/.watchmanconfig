@@ -1,0 +1,4 @@
+{
+  "ignore_dirs": [".Trash", "node_modules", ".git", ".nuxt"]
+}
+

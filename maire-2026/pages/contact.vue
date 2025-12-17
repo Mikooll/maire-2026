@@ -19,7 +19,7 @@
               Envoyez-nous un message
             </h2>
             
-            <form @submit.prevent="handleSubmit" class="space-y-4">
+            <form class="space-y-4" @submit.prevent="handleSubmit">
               <!-- Nom -->
               <div>
                 <label for="name" class="block text-sm font-semibold text-secondary-500 mb-2">
@@ -32,7 +32,7 @@
                   required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Votre nom"
-                />
+                >
               </div>
 
               <!-- Email -->
@@ -47,7 +47,7 @@
                   required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="votre.email@exemple.com"
-                />
+                >
               </div>
 
               <!-- Téléphone -->
@@ -61,7 +61,7 @@
                   type="tel"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="06 12 34 56 78"
-                />
+                >
               </div>
 
               <!-- Sujet -->
@@ -76,7 +76,7 @@
                   required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Objet de votre message"
-                />
+                >
               </div>
 
               <!-- Message -->
@@ -91,7 +91,7 @@
                   required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
                   placeholder="Votre message..."
-                ></textarea>
+                />
               </div>
 
               <!-- Message de succès -->
@@ -131,8 +131,8 @@
                   <div>
                     <h3 class="font-semibold text-secondary-500">Adresse</h3>
                     <p class="text-gray-600">
-                      Mairie<br />
-                      Place de la Mairie<br />
+                      Mairie<br>
+                      Place de la Mairie<br>
                       38000 Commune
                     </p>
                   </div>
