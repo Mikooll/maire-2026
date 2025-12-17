@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <!-- <NuxtPage /> -->
+     <h1>Bientôt disponible</h1>
   </NuxtLayout>
 </template>
