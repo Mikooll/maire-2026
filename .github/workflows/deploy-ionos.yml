@@ -27,17 +27,14 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
-      - name: Déploiement sur Ionos via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Déploiement sur Ionos via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          local-dir: .output/public/
-          server-dir: /
-          dangerous-clean-slate: false
-          log-level: verbose
-          timeout: 190000
+          port: 22
+          local_path: './.output/public/*'
+          remote_path: '/'
+          sftp_only: true
 
