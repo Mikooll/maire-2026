@@ -1,25 +1,25 @@
-# Nuxt
-.nuxt
+# Nuxt dev/build outputs
 .output
-.env
+.data
+.nuxt
+.nitro
+.cache
 dist
 
-# Node
+# Node dependencies
 node_modules
+
+# Logs
+logs
 *.log
-npm-debug.log*
 
-# IDE
-.idea
-.vscode
-*.swp
-*.swo
-*~
-
-# OS
+# Misc
 .DS_Store
-Thumbs.db
+.fleet
+.idea
 
-# Local
-.cache
-
+# Local env files
+.env
+.env.*
+!.env.example
+Test déploiement

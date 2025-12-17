@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "vue.server.hybridMode": true,
+  "vue.updateImportsOnFileMove.enabled": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "files.associations": {
+    "*.vue": "vue"
+  }
+}
+
