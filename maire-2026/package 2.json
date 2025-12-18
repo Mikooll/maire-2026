@@ -1,0 +1,28 @@
+{
+  "name": "unis-pour-les-laurentinois",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
+    "deploy:check": "npm run generate && echo '✅ Build réussi ! Prêt pour le déploiement'"
+  },
+  "dependencies": {
+    "nuxt": "^4.2.0",
+    "resend": "^6.6.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.11.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@types/node": "^25.0.3",
+    "@vue/language-server": "^3.1.5",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.5"
+  }
+}

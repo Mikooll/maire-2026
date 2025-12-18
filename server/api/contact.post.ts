@@ -23,8 +23,8 @@ export default defineEventHandler(async (event) => {
 
     // Email de notification pour l'équipe
     const notificationEmail = await resend.emails.send({
-      from: 'unis38380@gmail.com',
-      to: 'unis38380@gmail.com',
+      from: 'contact@unispourleslaurentinois.fr',
+      to: 'contact@unispourleslaurentinois.fr',
       subject: `[Contact Site] ${subject}`,
       html: `
         <h2>Nouveau message du formulaire de contact</h2>
@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
 
     // Email de confirmation pour l'utilisateur
     const confirmationEmail = await resend.emails.send({
-      from: 'unis38380@gmail.com',
+      from: 'contact@unispourleslaurentinois.fr',
       to: email,
       subject: 'Confirmation de réception de votre message',
       html: `

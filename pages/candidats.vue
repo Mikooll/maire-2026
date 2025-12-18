@@ -42,10 +42,130 @@ const candidates: Candidate[] = [
     id: 1,
     firstName: 'Christian',
     lastName: 'ALLEGRET',
-    currentJob: 'Directrice d\'école',
-    photo: '/images/candidates/placeholder.jpg',
+    currentJob: 'Artisan Commerçant',
+    photo: '/images/candidates/christian-allegret.jpg',
     citation: 'Coucou'
   },
+  // {
+  //   id: 2,
+  //   firstName: 'Yvette',
+  //   lastName: 'RIMET',
+  //   currentJob: 'Responsable Poste locale',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 3,
+  //   firstName: 'Cédric',
+  //   lastName: 'MOREL',
+  //   currentJob: 'Chef d\'entreprise',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 4,
+  //   firstName: 'Aline',
+  //   lastName: 'GRATREAUX',
+  //   currentJob: 'Professeure d\'anglais',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 5,
+  //   firstName: 'Gérard',
+  //   lastName: 'GAVIOT',
+  //   currentJob: 'Retraité, Officier marinier',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // // {
+  // //   id: 6,
+  // //   firstName: 'Gérard',
+  // //   lastName: 'GAVIOT',
+  // //   currentJob: 'Retraité, Officier marinier',
+  // //   photo: '/images/candidates/placeholder.jpg',
+  // //   citation: 'Coucou'
+  // // },
+  // {
+  //   id: 7,
+  //   firstName: 'Pascal',
+  //   lastName: 'GOULLET',
+  //   currentJob: 'Ingénieur de l\'industrie',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // // {
+  // //   id: 8,
+  // //   firstName: 'Bruno',
+  // //   lastName: 'GAUTHIER',
+  // //   currentJob: 'Ingénieur de l\'industrie',
+  // //   photo: '/images/candidates/placeholder.jpg',
+  // //   citation: 'Coucou'
+  // // },
+  // {
+  //   id: 9,
+  //   firstName: 'Michaël',
+  //   lastName: 'MARÉ',
+  //   currentJob: 'Ingénieur logiciel',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 10,
+  //   firstName: 'Gwendoline',
+  //   lastName: 'BOTTIN',
+  //   currentJob: 'Assistante maternelle',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 11,
+  //   firstName: 'Gilles',
+  //   lastName: 'BONAVENTURA',
+  //   currentJob: 'Cadre territorial de la sécurité et Directeur de la police municipale d\'Echirolles',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 12,
+  //   firstName: 'Lydia',
+  //   lastName: 'FRAGIACOMO',
+  //   currentJob: 'Infirmière',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 13,
+  //   firstName: 'Romain',
+  //   lastName: 'GALIFFET',
+  //   currentJob: 'Ingénieur en espaces verts',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 14,
+  //   firstName: 'Audrey',
+  //   lastName: 'COMBE MIMOUNAN',
+  //   currentJob: 'Vendeuse en boulangerie',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 15,
+  //   firstName: 'Stephane',
+  //   lastName: 'REGAZZONI',
+  //   currentJob: 'Vice président association Berbenno',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
+  // {
+  //   id: 16,
+  //   firstName: 'Mélanie',
+  //   lastName: 'DI PAOLA',
+  //   currentJob: 'Thanadoula - Aide Soignante',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
 ]
 </script>
 

@@ -72,9 +72,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Une gestion transparente</h3>
+              <h3 class="text-xl font-semibold mb-3 text-secondary-500">Une gestion responsable</h3>
               <p class="text-gray-600">
-                Une gestion responsable des finances publiques avec transparence et déontologie.
+                Une gestion responsable des finances publiques avec bon sens et déontologie.
               </p>
             </div>
           </div>
@@ -91,19 +91,19 @@
         <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-6">
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-              <span class="text-2xl">🤝</span>
+              <span class="text-2xl">👥</span>
             </div>
             <h3 class="font-semibold text-secondary-500">Soutien aux associations</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-              <span class="text-2xl">💧</span>
+              <span class="text-2xl">🚰</span>
             </div>
             <h3 class="font-semibold text-secondary-500">L'eau</h3>
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-              <span class="text-2xl">🏔️</span>
+              <span class="text-2xl">🔓</span>
             </div>
             <h3 class="font-semibold text-secondary-500">Mieux vivre en Chartreuse</h3>
           </div>
@@ -115,7 +115,7 @@
           </div>
           <div class="text-center">
             <div class="bg-primary-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-              <span class="text-2xl">💰</span>
+              <span class="text-2xl">€</span>
             </div>
             <h3 class="font-semibold text-secondary-500">Finances</h3>
           </div>

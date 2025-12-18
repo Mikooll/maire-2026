@@ -131,23 +131,21 @@
                   <div>
                     <h3 class="font-semibold text-secondary-500">Adresse</h3>
                     <p class="text-gray-600">
-                      Mairie<br>
-                      Place de la Mairie<br>
-                      38000 Commune
+                      Saint-Laurent-Du-Pont
                     </p>
                   </div>
                 </div>
 
                 <!-- Téléphone -->
-                <div class="flex items-start">
+               <!-- <div class="flex items-start">
                   <svg class="w-6 h-6 text-primary-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <!-- <div>
+                   <div>
                     <h3 class="font-semibold text-secondary-500">Téléphone</h3>
                     <p class="text-gray-600">01 23 45 67 89</p>
-                  </div> -->
-                </div>
+                  </div> 
+                </div> -->
 
                 <!-- Email -->
                 <div class="flex items-start">
@@ -156,14 +154,14 @@
                   </svg>
                   <div>
                     <h3 class="font-semibold text-secondary-500">Email</h3>
-                    <p class="text-gray-600">unis38380@gmail.com</p>
+                    <p class="text-gray-600">contact@unispourleslaurentinois.fr</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Horaires -->
-            <div class="card">
+            <!-- <div class="card">
               <h3 class="text-xl font-bold text-secondary-500 mb-4">
                 Permanences
               </h3>
@@ -173,7 +171,7 @@
                   Sur rendez-vous les autres jours
                 </p>
               </div>
-            </div>
+            </div> -->
 
             <!-- Réseaux sociaux -->
             <div class="card">

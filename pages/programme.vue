@@ -31,12 +31,12 @@
           <!-- Thème 1 - Soutien aux associations -->
           <div class="w-full">
             <button
-              @click="toggleTheme(1)"
               class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
+              @click="toggleTheme(1)"
             >
               <div class="flex items-center gap-3">
-                <span class="text-3xl">{{ themes[0].icon }}</span>
-                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[0].title }}</h3>
+                <span class="text-3xl">{{ themes[0]?.icon }}</span>
+                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[0]?.title }}</h3>
                 <svg 
                   class="w-5 h-5 text-gray-600 transition-transform duration-300"
                   :class="{ 'rotate-180': selectedTheme === 1 }"
@@ -50,13 +50,13 @@
             </button>
             <transition name="dropdown">
               <div v-if="selectedTheme === 1" class="mt-2 bg-white border-2 border-primary-500 rounded-lg shadow-xl p-4">
-                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[0].description }}</p>
+                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[0]?.description }}</p>
                 <div class="space-y-2">
                   <div
-                    v-for="(subtheme, idx) in themes[0].subthemes"
+                    v-for="(subtheme, idx) in themes[0]?.subthemes"
                     :key="idx"
-                    @click="showDetails(1, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                    @click="showDetails(1, idx, subtheme)"
                   >
                     <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(1, idx) }}</span>
@@ -71,12 +71,12 @@
           <!-- Thème 3 - Mieux vivre en Chartreuse -->
           <div class="w-full">
             <button
-              @click="toggleTheme(3)"
               class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
+              @click="toggleTheme(3)"
             >
               <div class="flex items-center gap-3">
-                <span class="text-3xl">{{ themes[2].icon }}</span>
-                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[2].title }}</h3>
+                <span class="text-3xl">{{ themes[2]?.icon }}</span>
+                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[2]?.title }}</h3>
                 <svg 
                   class="w-5 h-5 text-gray-600 transition-transform duration-300"
                   :class="{ 'rotate-180': selectedTheme === 3 }"
@@ -90,13 +90,13 @@
             </button>
             <transition name="dropdown">
               <div v-if="selectedTheme === 3" class="mt-2 bg-white border-2 border-primary-500 rounded-lg shadow-xl p-4">
-                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[2].description }}</p>
+                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[2]?.description }}</p>
                 <div class="space-y-2">
                   <div
-                    v-for="(subtheme, idx) in themes[2].subthemes"
+                    v-for="(subtheme, idx) in themes[2]?.subthemes"
                     :key="idx"
-                    @click="showDetails(3, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                    @click="showDetails(3, idx, subtheme)"
                   >
                     <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(3, idx) }}</span>
@@ -123,12 +123,12 @@
           <!-- Thème 5 - Finances (en dessous de l'image) -->
           <div class="w-full">
             <button
+            class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
               @click="toggleTheme(5)"
-              class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
             >
               <div class="flex items-center gap-3">
-                <span class="text-3xl">{{ themes[4].icon }}</span>
-                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[4].title }}</h3>
+                <span class="text-3xl">{{ themes[4]?.icon }}</span>
+                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[4]?.title }}</h3>
                 <svg 
                   class="w-5 h-5 text-gray-600 transition-transform duration-300"
                   :class="{ 'rotate-180': selectedTheme === 5 }"
@@ -142,13 +142,13 @@
             </button>
             <transition name="dropdown">
               <div v-if="selectedTheme === 5" class="mt-2 bg-white border-2 border-primary-500 rounded-lg shadow-xl p-4">
-                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[4].description }}</p>
+                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[4]?.description }}</p>
                 <div class="space-y-2">
                   <div
-                    v-for="(subtheme, idx) in themes[4].subthemes"
+                    v-for="(subtheme, idx) in themes[4]?.subthemes"
                     :key="idx"
-                    @click="showDetails(5, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                    @click="showDetails(5, idx, subtheme)"
                   >
                     <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(5, idx) }}</span>
@@ -166,12 +166,12 @@
           <!-- Thème 2 - L'eau -->
           <div class="w-full">
             <button
-              @click="toggleTheme(2)"
               class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
+              @click="toggleTheme(2)"
             >
               <div class="flex items-center gap-3">
-                <span class="text-3xl">{{ themes[1].icon }}</span>
-                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[1].title }}</h3>
+                <span class="text-3xl">{{ themes[1]?.icon }}</span>
+                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[1]?.title }}</h3>
                 <svg 
                   class="w-5 h-5 text-gray-600 transition-transform duration-300"
                   :class="{ 'rotate-180': selectedTheme === 2 }"
@@ -185,13 +185,13 @@
             </button>
             <transition name="dropdown">
               <div v-if="selectedTheme === 2" class="mt-2 bg-white border-2 border-primary-500 rounded-lg shadow-xl p-4">
-                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[1].description }}</p>
+                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[1]?.description }}</p>
                 <div class="space-y-2">
                   <div
-                    v-for="(subtheme, idx) in themes[1].subthemes"
+                    v-for="(subtheme, idx) in themes[1]?.subthemes"
                     :key="idx"
-                    @click="showDetails(2, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                    @click="showDetails(2, idx, subtheme)"
                   >
                     <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(2, idx) }}</span>
@@ -206,12 +206,12 @@
           <!-- Thème 4 - Restaurer la déontologie -->
           <div class="w-full">
             <button
-              @click="toggleTheme(4)"
               class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
+              @click="toggleTheme(4)"
             >
               <div class="flex items-center gap-3">
-                <span class="text-3xl">{{ themes[3].icon }}</span>
-                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[3].title }}</h3>
+                <span class="text-3xl">{{ themes[3]?.icon }}</span>
+                <h3 class="font-bold text-secondary-500 text-sm lg:text-base flex-1">{{ themes[3]?.title }}</h3>
                 <svg 
                   class="w-5 h-5 text-gray-600 transition-transform duration-300"
                   :class="{ 'rotate-180': selectedTheme === 4 }"
@@ -225,13 +225,13 @@
             </button>
             <transition name="dropdown">
               <div v-if="selectedTheme === 4" class="mt-2 bg-white border-2 border-primary-500 rounded-lg shadow-xl p-4">
-                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[3].description }}</p>
+                <p class="text-xs text-gray-600 mb-3 italic">{{ themes[3]?.description }}</p>
                 <div class="space-y-2">
                   <div
-                    v-for="(subtheme, idx) in themes[3].subthemes"
+                    v-for="(subtheme, idx) in themes[3]?.subthemes"
                     :key="idx"
-                    @click="showDetails(4, idx, subtheme)"
                     class="p-2 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                    @click="showDetails(4, idx, subtheme)"
                   >
                     <div class="flex items-center gap-2">
                       <span class="text-lg">{{ getRelevantIcon(4, idx) }}</span>
@@ -259,8 +259,8 @@
         <!-- Thèmes -->
         <div v-for="theme in themes" :key="theme.id" class="w-full">
           <button
-            @click="toggleTheme(theme.id)"
             class="w-full bg-white hover:bg-primary-50 border-2 border-gray-300 hover:border-primary-500 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 text-left"
+            @click="toggleTheme(theme.id)"
           >
             <div class="flex items-center gap-3">
               <span class="text-3xl">{{ theme.icon }}</span>
@@ -283,8 +283,8 @@
                 <div
                   v-for="(subtheme, idx) in theme.subthemes"
                   :key="idx"
-                  @click="showDetails(theme.id, idx, subtheme)"
                   class="p-3 bg-primary-50 hover:bg-primary-100 rounded border border-primary-200 cursor-pointer transition-all"
+                  @click="showDetails(theme.id, idx, subtheme)"
                 >
                   <div class="flex items-center gap-2">
                     <span class="text-xl">{{ getRelevantIcon(theme.id, idx) }}</span>
@@ -314,8 +314,8 @@
               {{ tooltipData.title }}
             </h3>
             <button
+            class="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
               @click="tooltipData = null"
-              class="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
             >
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -328,8 +328,8 @@
           </div>
           
           <button
+          class="mt-6 w-full px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors font-medium"
             @click="tooltipData = null"
-            class="mt-6 w-full px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors font-medium"
           >
             Fermer
           </button>
@@ -371,7 +371,11 @@ const themes = [
         details: 'Nous nous engageons à réduire les indemnités des élus pour redistribuer ces ressources aux associations locales, garantissant ainsi un soutien financier pérenne et accru.'
       },
       {
-        title: 'Recherche active de financement extérieur',
+        title: 'Maintenir et développer l\'offre d\'accueil',
+        details: 'Nous nous engageons à réduire les indemnités des élus pour redistribuer ces ressources aux associations locales, garantissant ainsi un soutien financier pérenne et accru.'
+      },
+      {
+        title: 'Recherche active de financement extérieur à la commune',
         details: 'Mise en place d\'une cellule dédiée à la recherche de subventions régionales, départementales et européennes pour maximiser les ressources disponibles pour les associations.'
       },
     ],
@@ -383,7 +387,11 @@ const themes = [
     description: 'La gestion de l\'eau est un enjeu majeur. Nous garantirons une eau de qualité pour tous.',
     subthemes: [
       {
-        title: 'Garder la compétence et la tarification correcte',
+        title: 'Garder la compétence au sein de la commune',
+        details: 'Nous maintiendrons la gestion locale de l\'eau pour garantir une tarification juste et transparente, adaptée aux besoins de nos habitants, tout en assurant la qualité du service.'
+      },
+      {
+        title: 'Maintenir une tarification correcte',
         details: 'Nous maintiendrons la gestion locale de l\'eau pour garantir une tarification juste et transparente, adaptée aux besoins de nos habitants, tout en assurant la qualité du service.'
       },
     ],
@@ -395,11 +403,15 @@ const themes = [
     description: 'Améliorer le cadre de vie de tous les habitants dans le respect de notre environnement.',
     subthemes: [
       {
-        title: 'Améliorer le suivi du réseau routier',
+        title: 'Améliorer le suivi du réseau routier communale',
         details: 'Mise en place d\'un plan pluriannuel d\'entretien et de rénovation des routes communales avec un suivi rigoureux et des interventions rapides sur les zones prioritaires.'
       },
       {
-        title: 'Mise en place raisonnée de la vidéo protections.',
+        title: 'Mise en place raisonnée de la vidéo protection.',
+        details: 'Installation de caméras de vidéoprotection aux points stratégiques, dans le respect de la vie privée et après concertation citoyenne, pour renforcer la sécurité des habitants.'
+      },
+      {
+        title: 'Plus de fermeté par rapport aux actes de délinquance',
         details: 'Installation de caméras de vidéoprotection aux points stratégiques, dans le respect de la vie privée et après concertation citoyenne, pour renforcer la sécurité des habitants.'
       },
     ],
@@ -419,11 +431,11 @@ const themes = [
         details: 'Réduction volontaire des indemnités des élus municipaux pour montrer l\'exemple et réaffecter ces sommes au service public et aux projets communaux.'
       },
       {
-        title: 'Mettre fin aux manoeuvres politiciennes',
+        title: 'Mettre fin aux basses manoeuvres politiciennes',
         details: 'Adoption d\'une charte éthique pour les élus, interdisant les conflits d\'intérêts et garantissant l\'impartialité dans toutes les décisions municipales.'
       },
       {
-        title: 'Associer la population aux grandes orientations du mandat',
+        title: 'Vaste consultation de la population pour les grandes orientations du mandat',
         details: 'Organisation de conseils participatifs citoyens et de consultations publiques pour toutes les décisions majeures, avec publication des résultats et prise en compte des avis.'
       },
     ],
@@ -435,15 +447,23 @@ const themes = [
     description: 'Une gestion rigoureuse et responsable des finances communales.',
     subthemes: [
       {
-        title: 'Stabilisation des impôts.',
+        title: 'Stabilisation puis baisse des impôts.',
         details: 'Engagement ferme de ne pas augmenter les taux d\'imposition locaux pendant tout le mandat, tout en maintenant la qualité des services publics.'
       },
       {
-        title: 'Mieux gérer notre patrimoine',
+        title: 'Mieux gérer notre patrimoine pour améliorer nos recettes.',
         details: 'Optimisation de la gestion des bâtiments communaux, rénovation énergétique et valorisation des espaces inutilisés pour générer des économies et de nouvelles recettes.'
       },
       {
         title: 'Diversifier nos recettes.',
+        details: 'Recherche active de nouvelles sources de financement (subventions, partenariats public-privé, mutualisation avec d\'autres communes) pour réduire la dépendance aux impôts locaux.'
+      },
+      {
+        title: 'Baisse des indemnités des élus municipaux',
+        details: 'Recherche active de nouvelles sources de financement (subventions, partenariats public-privé, mutualisation avec d\'autres communes) pour réduire la dépendance aux impôts locaux.'
+      },
+      {
+        title: 'Rationnalisation des dépenses',
         details: 'Recherche active de nouvelles sources de financement (subventions, partenariats public-privé, mutualisation avec d\'autres communes) pour réduire la dépendance aux impôts locaux.'
       },
     ],
@@ -451,13 +471,13 @@ const themes = [
 ]
 
 // Fonction pour obtenir une icône pertinente selon le thème et l'index
-const getRelevantIcon = (themeId, subIndex) => {
-  const iconMapping = {
-    1: ['💶', '🔍'], // Soutien aux associations : argent, recherche
-    2: ['💧'], // L'eau : goutte d'eau
-    3: ['🛣️', '📹'], // Mieux vivre : route, caméra
+const getRelevantIcon = (themeId: number, subIndex: number) => {
+  const iconMapping: { [key: number]: string[] } = {
+    1: ['💶', '🏠', '🔍'], // Soutien aux associations : argent, accueil, recherche
+    2: ['🏛️', '💧'], // L'eau : compétence locale, tarification
+    3: ['🛣️', '📹', '🚨'], // Vivre en sécurité : route, caméra, fermeté
     4: ['📋', '📉', '🚫', '👥'], // Déontologie : engagements, baisse, stop, participation
-    5: ['🔒', '🏛️', '📊'], // Finances : stabilité, patrimoine, diversité
+    5: ['📊', '🏛️', '💼', '📉', '⚙️'], // Finances : stabilisation, patrimoine, diversité, baisse indemnités, rationalisation
   }
   
   const icons = iconMapping[themeId] || ['✅']
@@ -465,7 +485,7 @@ const getRelevantIcon = (themeId, subIndex) => {
 }
 
 // Fonction pour toggle un thème (ouvrir/fermer)
-const toggleTheme = (themeId) => {
+const toggleTheme = (themeId: number) => {
   if (selectedTheme.value === themeId) {
     selectedTheme.value = null
   } else {
@@ -474,7 +494,7 @@ const toggleTheme = (themeId) => {
 }
 
 // Fonction pour afficher les détails d'un sous-thème
-const showDetails = (themeId, subIndex, subtheme) => {
+const showDetails = (themeId: number, subIndex: number, subtheme: { title: string; details: string }) => {
   tooltipData.value = {
     themeId,
     subthemeIndex: subIndex,

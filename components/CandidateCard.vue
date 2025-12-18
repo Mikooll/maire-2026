@@ -1,5 +1,5 @@
 <template>
-  <div class="card group cursor-pointer transform transition-transform duration-200 hover:scale-105">
+  <div class="card group transform transition-transform duration-200 hover:scale-105">
     <!-- Photo -->
     <div class="mb-4 overflow-hidden rounded-lg">
       <img
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <div class="flex items-start">
+        <!-- <div class="flex items-start">
           <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
           </svg>
@@ -35,7 +35,7 @@
             <p class="text-sm font-semibold text-secondary-600 mb-1">Citation</p>
             <p class="text-gray-600 italic">"{{ candidate.citation }}"</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

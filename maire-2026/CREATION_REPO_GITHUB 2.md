@@ -85,4 +85,3 @@ Si GitHub vous demande un mot de passe lors du push, il faut utiliser un **Perso
 
 Ou mieux, configurez SSH : https://docs.github.com/fr/authentication/connecting-to-github-with-ssh
 
-

@@ -58,4 +58,3 @@ Maintenant, à chaque `git push`, votre site se met à jour automatiquement sur 
 
 📖 **Guide détaillé** : [`DEPLOIEMENT_IONOS.md`](DEPLOIEMENT_IONOS.md)
 
-

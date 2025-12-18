@@ -87,4 +87,3 @@ Si besoin d'aide sur les paramètres FTP :
 - Support Ionos : 09 70 80 89 11
 - [Centre d'aide Ionos](https://www.ionos.fr/assistance)
 
-

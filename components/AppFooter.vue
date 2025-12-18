@@ -41,7 +41,7 @@
         <div>
           <h4 class="text-lg font-semibold mb-4">Contact</h4>
           <ul class="space-y-2 text-secondary-100">
-            <li>Email : unis38380@gmail.com</li>
+            <li>Email : contact@unispourleslaurentinois.fr</li>
             <!-- <li>Téléphone : 01 23 45 67 89</li> -->
             <li class="pt-4">
               <!-- Réseaux sociaux - à personnaliser -->
