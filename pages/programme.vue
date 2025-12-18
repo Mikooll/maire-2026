@@ -372,7 +372,7 @@ const themes = [
       },
       {
         title: 'Maintenir et développer l\'offre d\'accueil',
-        details: 'Nous nous engageons à réduire les indemnités des élus pour redistribuer ces ressources aux associations locales, garantissant ainsi un soutien financier pérenne et accru.'
+        details: 'Soutien renforcé aux structures d\'accueil associatives (périscolaire, jeunesse, seniors) avec amélioration des infrastructures et élargissement des horaires pour répondre aux besoins des familles.'
       },
       {
         title: 'Recherche active de financement extérieur à la commune',
@@ -392,7 +392,7 @@ const themes = [
       },
       {
         title: 'Maintenir une tarification correcte',
-        details: 'Nous maintiendrons la gestion locale de l\'eau pour garantir une tarification juste et transparente, adaptée aux besoins de nos habitants, tout en assurant la qualité du service.'
+        details: 'Garantie d\'une tarification de l\'eau accessible et équitable, avec mise en place d\'une tarification progressive favorisant les économies d\'eau et protégeant les ménages les plus modestes.'
       },
     ],
   },
@@ -412,7 +412,7 @@ const themes = [
       },
       {
         title: 'Plus de fermeté par rapport aux actes de délinquance',
-        details: 'Installation de caméras de vidéoprotection aux points stratégiques, dans le respect de la vie privée et après concertation citoyenne, pour renforcer la sécurité des habitants.'
+        details: 'Renforcement de la collaboration avec les forces de l\'ordre, signalement systématique des infractions et accompagnement des victimes pour garantir la tranquillité publique et le respect des règles.'
       },
     ],
   },
@@ -460,11 +460,11 @@ const themes = [
       },
       {
         title: 'Baisse des indemnités des élus municipaux',
-        details: 'Recherche active de nouvelles sources de financement (subventions, partenariats public-privé, mutualisation avec d\'autres communes) pour réduire la dépendance aux impôts locaux.'
+        details: 'Réduction significative des indemnités des élus pour rediriger ces économies vers les services publics, les associations et les projets d\'investissement prioritaires pour la commune.'
       },
       {
         title: 'Rationnalisation des dépenses',
-        details: 'Recherche active de nouvelles sources de financement (subventions, partenariats public-privé, mutualisation avec d\'autres communes) pour réduire la dépendance aux impôts locaux.'
+        details: 'Audit complet des dépenses communales, suppression des dépenses superflues, optimisation des achats publics par mutualisation et renégociation des contrats pour maximiser l\'efficacité de chaque euro dépensé.'
       },
     ],
   },
