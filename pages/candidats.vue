@@ -69,7 +69,7 @@ const candidates: Candidate[] = [
     id: 2,
     firstName: 'Yvette',
     lastName: 'RIMET',
-    currentJob: 'Responsable Poste locale',
+    currentJob: 'Responsable Opérationnel centre courrier',
     photo: '/images/candidates/placeholder.jpg',
     citation: 'Coucou'
   },
