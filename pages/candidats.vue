@@ -137,14 +137,14 @@ const candidates: Candidate[] = [
     photo: '/images/candidates/placeholder.jpg',
     citation: 'Coucou'
   },
-  {
-    id: 11,
-    firstName: 'Gilles',
-    lastName: 'BONAVENTURA',
-    currentJob: 'Cadre territorial de la sécurité et Directeur de la police municipale d\'Echirolles',
-    photo: '/images/candidates/placeholder.jpg',
-    citation: 'Coucou'
-  },
+  // {
+  //   id: 11,
+  //   firstName: 'TBD',
+  //   lastName: 'TBD',
+  //   currentJob: 'Cadre territorial de la sécurité et Directeur de la police municipale d\'Echirolles',
+  //   photo: '/images/candidates/placeholder.jpg',
+  //   citation: 'Coucou'
+  // },
   // {
   //   id: 12,
   //   firstName: 'TBD',
