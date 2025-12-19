@@ -1,12 +1,25 @@
 <template>
   <div class="card group transform transition-transform duration-200 hover:scale-105">
     <!-- Photo -->
-    <div class="mb-4 overflow-hidden rounded-lg">
+    <div class="mb-4 overflow-hidden rounded-lg bg-gray-200 relative">
+      <!-- Placeholder avec initiales -->
+      <div 
+        v-if="!imageLoaded || imageError"
+        class="w-full h-64 bg-primary-500 flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+      >
+        <span class="text-white text-6xl font-bold">
+          {{ getInitials(candidate.firstName, candidate.lastName) }}
+        </span>
+      </div>
+      
+      <!-- Image réelle -->
       <img
+        v-show="imageLoaded && !imageError"
         :src="candidate.photo"
         :alt="`Photo de ${candidate.firstName} ${candidate.lastName}`"
         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-        @error="handleImageError"
+        @load="onImageLoad"
+        @error="onImageError"
       >
     </div>
 
@@ -42,6 +55,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { Candidate } from '~/types/candidate'
 
 interface Props {
@@ -50,11 +64,27 @@ interface Props {
 
 defineProps<Props>()
 
-// Gestion de l'erreur de chargement d'image (afficher un placeholder)
-const handleImageError = (event: Event) => {
-  const img = event.target as HTMLImageElement
-  // Image placeholder SVG avec initiales
-  img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"%3E%3Crect fill="%23C06736" width="400" height="400"/%3E%3Ctext fill="%23ffffff" font-family="Arial" font-size="120" x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle"%3E?%3C/text%3E%3C/svg%3E'
+// États pour gérer le chargement de l'image
+const imageLoaded = ref(false)
+const imageError = ref(false)
+
+// Fonction pour obtenir les initiales
+const getInitials = (firstName: string, lastName: string): string => {
+  const firstInitial = firstName?.charAt(0)?.toUpperCase() || ''
+  const lastInitial = lastName?.charAt(0)?.toUpperCase() || ''
+  return `${firstInitial}${lastInitial}`
+}
+
+// Gestion du chargement réussi de l'image
+const onImageLoad = () => {
+  imageLoaded.value = true
+  imageError.value = false
+}
+
+// Gestion de l'erreur de chargement d'image
+const onImageError = () => {
+  imageLoaded.value = false
+  imageError.value = true
 }
 </script>
 
